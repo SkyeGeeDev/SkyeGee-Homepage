@@ -13,7 +13,7 @@ export default function Home() {
         <div className='flex justify-center bg-dblue'>
           <div className='flex flex-col'>
             <div className='text-xl'>This website is awesome</div>
-            <div className='text-sm'>This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast.</div>
+            <div className='text-sm'>This website has some subtext that goes here under the main title. It&apos;s a smaller font and the color is lower contrast.</div>
           </div>
           <div>
             This is a placeholder for an image
@@ -44,10 +44,10 @@ export default function Home() {
         </div>
       </div>
       <div className='flex text-center justify-center'>
-        This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.
+        This is an inspiring quote, or a testimonial from a customer. Maybe it&apos;s just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.
       </div>
       <div className='bg-blue'>
-        Call to action! It's time!
+        Call to action! It&apos;s time!
         Sign up to our product by clicking that button right over there!
       </div>
       <div className='text-center'>Copyright © SkyeGee 2024</div>
