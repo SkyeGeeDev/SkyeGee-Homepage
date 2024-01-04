@@ -12,6 +12,7 @@ const config: Config = {
       white: '#F9FAF8',
       swhite: '#E5E7EB',
       blue: '#3882F6',
+      gray: '#808080'
     },
     fontSize: {
       sm: '18px',
