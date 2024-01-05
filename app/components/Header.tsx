@@ -2,9 +2,9 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='flex justify-between bg-dblue p-4'>
-        <div>Header Logo</div>
-        <div className='flex flex-row space-x-4'>
+    <div className='grid grid-cols-12 justify-between bg-dblue p-4'>
+        <div className='col-span-2 col-start-3'>Header Logo</div>
+        <div className='flex flex-row col-span-3 col-end-11 justify-end space-x-10'>
             <div>Header link one</div>
             <div>Header link two</div>
             <div>Header link three</div>

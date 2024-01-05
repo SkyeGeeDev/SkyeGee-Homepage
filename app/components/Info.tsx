@@ -6,32 +6,29 @@ import PXN from '../../public/Ghost 7486.jpg'
 
 const Info = () => {
   return (
-    <div className='grid min-h-[50vh] place-items-center bg-white'>
-        <div className='text-center text-lg text-dblue font-extrabold'>
+    <div className='grid grid-cols-12 min-h-[50vh] place-items-center bg-white'>
+        <div className='col-span-full flex text-center text-lg text-dblue font-extrabold'>
           Favorite Projects
         </div>
-        <div className='flex justify-center space-x-4 text-dblue'>
-          <div className='w-[400px] text-center'>
-            <Image
-                src={Avarik}
-                alt=''
-            />
-            <div className='text-sm'>Avarik Saga</div>
-          </div>
-          <div className='w-[400px] text-center'>
-            <Image
-                src={Azuki}
-                alt=''
-            />
-            <div className='text-sm'>Azuki</div>
-          </div>
-          <div className='w-[400px] text-center'>
-            <Image
-                src={PXN}
-                alt=''
-            />
-            <div className='text-sm'>PxN</div>
-          </div>
+        <div className='flex col-span-8 col-start-3 justify-center text-dblue space-x-4'>
+          <Image
+            className='transition duration-300 rounded-lg hover:opacity-50'
+            src={Avarik}
+            alt=''
+            width={400}
+          />
+          <Image
+            className='rounded-lg'
+            src={Azuki}
+            alt=''
+            width={400}
+          />
+          <Image
+            className='rounded-lg'
+            src={PXN}
+            alt=''
+            width={400}
+          />
         </div>
       </div>
   )
