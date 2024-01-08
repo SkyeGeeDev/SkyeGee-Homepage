@@ -8,7 +8,7 @@ const Info = () => {
   return (
     <div className='grid grid-cols-12 min-h-[50vh] place-items-center bg-white py-8'>
         <div className='col-span-full flex text-center text-lg text-dblue font-extrabold'>
-          Favorite Projects
+          Favorite NFT Projects
         </div>
         <div className='flex col-span-8 col-start-3 justify-center text-dblue space-x-4'>
           <Image
