@@ -2,11 +2,11 @@ import React from 'react'
 
 const Quote = () => {
   return (
-    <div className='grid grid-cols-12 bg-swhite text-dblue text-center justify-center'>
+    <div className='grid grid-cols-12 bg-swhite text-dblue text-center justify-center py-8'>
         <div className='col-span-full text-lg font-extrabold'>
             Follow me on Social Media!
         </div>
-        <div className='col-start-3 col-span-8'>
+        <div className='flex flex-row col-start-3 col-span-8 justify-center'>
             <div>
                 Twitter
             </div>
