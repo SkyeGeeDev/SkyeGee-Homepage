@@ -16,6 +16,7 @@ const Hero = () => {
             className='rounded-lg flex col-end-11 col-span-3 '
             src={AzukiPXN}
             alt=''
+            priority={true}
         />
     </div>
   )
