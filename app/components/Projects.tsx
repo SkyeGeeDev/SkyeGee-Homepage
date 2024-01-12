@@ -10,11 +10,6 @@ const Projects = () => {
         </div>
         <div className='flex flex-row col-start-3 col-span-8 justify-center space-x-8'>
             <Script>
-              function showMessage (
-                alert('Hello');
-              )
-
-              showMessage();
             </Script>
         </div>
     </div>
