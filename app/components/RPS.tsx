@@ -19,7 +19,7 @@ const RPS = () => {
     function playRound(playerSelection: string) {
 
         let computerSelection = getComputerChoice();
-        let result;
+        let result: string;
 
         document.getElementById('playerChoice')!.innerHTML = playerSelection;
         document.getElementById('computerChoice')!.innerHTML = computerSelection;
