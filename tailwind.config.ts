@@ -22,6 +22,9 @@ const config: Config = {
       xl: '48px'
     },
     extend: {
+      fontFamily: {
+        'garamond': ['Garamond']
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
