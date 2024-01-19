@@ -47,7 +47,7 @@ const RPS = () => {
         } else {
             result = 'Invalid input. Please try again.'
         }
-        document.getElementById('result').innerHTML = result
+        document.getElementById('result')!.innerHTML = result;
         return result;
     }
 
