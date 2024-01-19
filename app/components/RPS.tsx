@@ -21,8 +21,8 @@ const RPS = () => {
         let computerSelection = getComputerChoice();
         let result;
 
-        document.getElementById('playerChoice').innerHTML = playerSelection;
-        document.getElementById('computerChoice').innerHTML = computerSelection;
+        document.getElementById('playerChoice')!.innerHTML = playerSelection;
+        document.getElementById('computerChoice')!.innerHTML = computerSelection;
 
         if (playerSelection === computerSelection){
             result = 'Tie Game.'
