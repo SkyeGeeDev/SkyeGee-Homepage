@@ -54,9 +54,9 @@ const RPS = () => {
   return (
     <div className='h-screen grid place-content-center item-center'>
         <div className='flex space-x-4 pb-8'>
-            <button onClick={() => playRound('rock')} className='bg-blue p-4 rounded-lg w-40'>Rock</button>
-            <button onClick={() => playRound('paper')} className='bg-blue p-4 rounded-lg w-40'>Paper</button>
-            <button onClick={() => playRound('scissors')} className='bg-blue p-4 rounded-lg w-40'>Scissors</button>
+            <button onClick={() => playRound('rock')} className='bg-blue p-4 rounded-lg w-40 hover:bg-hblue'>Rock</button>
+            <button onClick={() => playRound('paper')} className='bg-blue p-4 rounded-lg w-40 hover:bg-hblue'>Paper</button>
+            <button onClick={() => playRound('scissors')} className='bg-blue p-4 rounded-lg w-40 hover:bg-hblue'>Scissors</button>
         </div>
         <div className='flex flex-row text-center space-x-8 place-content-center'>
             <div className=''>
@@ -68,7 +68,7 @@ const RPS = () => {
                 <div id='computerChoice' className='bg-dblue p-4 rounded-lg w-40'/>
             </div>
         </div>
-        <div className='text-center' id='result'> </div>
+        <div className='text-center pt-8' id='result'> </div>
     </div>
   )
 }
