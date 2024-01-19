@@ -5,7 +5,7 @@ import { useState } from 'react';
 const RPS = () => {
 
     function getComputerChoice(){
-        let choice = parseInt(Math.floor(Math.random() * 3) + 1);
+        let choice = Math.floor(Math.random() * 3) + 1;
 
         if (choice === 1){
             return 'rock';
