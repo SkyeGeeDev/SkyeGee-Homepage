@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "next": "14.0.4",
+    "prompt-sync": "^4.2.0",
     "react": "^18",
     "react-dom": "^18",
     "sharp": "^0.33.1"
