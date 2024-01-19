@@ -16,7 +16,7 @@ const RPS = () => {
         }
     }
 
-    function playRound(playerSelection) {
+    function playRound(playerSelection: string) {
 
         let computerSelection = getComputerChoice();
         let result;
