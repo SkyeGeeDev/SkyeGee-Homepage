@@ -25,27 +25,27 @@ const RPS = () => {
         document.getElementById('computerChoice')!.innerHTML = computerSelection;
 
         if (playerSelection === computerSelection){
-            return result = 'Tie Game.'
+            result = 'Tie Game.'
         } else if (playerSelection === 'rock'){
             if(computerSelection === 'paper'){
-                return result = `You lost. Paper beats Rock.`;
+                result = `You lost. Paper beats Rock.`;
             } else if (computerSelection === 'scissors') {
-                return result = `You won! Rock beats Scissors.`;
+                result = `You won! Rock beats Scissors.`;
             }
         } else if (playerSelection === 'paper'){
             if(computerSelection === 'scissors'){
-                return result = `You lost. Scissors beats Paper.`;
+                result = `You lost. Scissors beats Paper.`;
             } else if (computerSelection === 'rock') {
-                return result = `You won! Paper beats Rock.`;
+                result = `You won! Paper beats Rock.`;
             }
         } else if (playerSelection === 'scissors'){
             if(computerSelection === 'rock'){
-                return result = `You lost. Rock beats Scissors`;
+                result = `You lost. Rock beats Scissors`;
             } else if (computerSelection === 'paper') {
-                return result = `You won! Rock beats Paper.`;
+                result = `You won! Rock beats Paper.`;
             }
         } else {
-            return result = 'Invalid input. Please try again.'
+            result = 'Invalid input. Please try again.'
         }
     
         document.getElementById('result')!.innerHTML = result;
