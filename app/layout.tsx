@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Permanent_Marker } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const permanent = Permanent_Marker({ subsets: ['latin'] , weight: ['400'] , variable: '--font-permanent-marker'});
+const inter = Inter({ subsets: ['latin'] , variable: '--font-inter'});
 
 export const metadata: Metadata = {
   title: 'Welcome to SkyeGee',
@@ -16,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${permanent.variable} ${inter.variable}`}>{children}</body>
     </html>
   )
 }
