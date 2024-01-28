@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Formik, Form, useField} from 'formik'
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser'
@@ -17,7 +17,7 @@ const MyTextInput = ({label, ...props } : {label : string; name: string; type: s
   );
 };
 
-const MySelect = ({label, ...props } : {label: string; name: string; id: string}) => {
+const MySelect = ({label, ...props } : {label: string; name: string; id: string; children: ReactNode}) => {
   const [field, meta] = useField(props);
   return (
     <div className='py-4'>
