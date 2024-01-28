@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { IoMdArrowBack } from "react-icons/io";
 
 
-const RPS = (props) => {
+const RPS = (props: any) => {
     const [playerScore, setPlayerScore] = useState(0);
     const [computerScore, setComputerScore] = useState(0);
 
