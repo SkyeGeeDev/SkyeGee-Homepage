@@ -1,10 +1,14 @@
 'use client';
 import React from 'react'
 import { useState } from 'react';
+import { IoMdArrowBack } from "react-icons/io";
 
-const RPS = () => {
+
+const RPS = (props) => {
     const [playerScore, setPlayerScore] = useState(0);
     const [computerScore, setComputerScore] = useState(0);
+
+    const {back} = props;
 
     function getComputerChoice(){
         let choice = Math.floor(Math.random() * 3) + 1;
@@ -30,26 +34,26 @@ const RPS = () => {
             result = 'Tie Game.';
         } else if (playerSelection === 'rock'){
             if(computerSelection === 'paper'){
-                result = `You lost. Paper beats Rock.`;
+                result = `You lost.`;
                 setComputerScore(computerScore + 1);
             } else if (computerSelection === 'scissors') {
-                result = `You won! Rock beats Scissors.`;
+                result = `You won!`;
                 setPlayerScore(playerScore + 1);
             }
         } else if (playerSelection === 'paper'){
             if(computerSelection === 'scissors'){
-                result = `You lost. Scissors beats Paper.`;
+                result = `You lost.`;
                 setComputerScore(computerScore + 1);
             } else if (computerSelection === 'rock') {
-                result = `You won! Paper beats Rock.`;
+                result = `You won!`;
                 setPlayerScore(playerScore + 1);
             }
         } else if (playerSelection === 'scissors'){
             if(computerSelection === 'rock'){
-                result = `You lost. Rock beats Scissors`;
+                result = `You lost.`;
                 setComputerScore(computerScore + 1);
             } else if (computerSelection === 'paper') {
-                result = `You won! Rock beats Paper.`;
+                result = `You won!`;
                 setPlayerScore(playerScore + 1);
             }
         } else {
@@ -59,21 +63,26 @@ const RPS = () => {
     }
 
   return (
-    <div className='h-screen grid place-content-center item-center'>
+    <div className='pb-8 px-[100px] border-2 rounded-lg place-content-center item-center bg-dblue'>
+        <div className='mt-4 cursor-pointer' onClick={back}>
+            <IoMdArrowBack size={30}/>
+        </div>
         <div className='text-center pb-8'>
-            <p className='text-xl pb-4'>Scoreboard</p>
+            <p className='text-xl py-4'>Scoreboard</p>
             <div className='flex flex-row place-content-center space-x-4'>
-                <div className='bg-dblue p-4 rounded-lg'>
+                <div className='bg-hblue p-4 rounded-lg'>
                     <p>Player</p>
                     <div className='text-xl p-8'>{playerScore}</div>
                 </div>
-                <div className='bg-dblue p-4 rounded-lg'>
+                <div className='bg-hblue p-4 rounded-lg'>
                     <p>Computer</p>
                     <div className='text-xl p-8'>{computerScore}</div>
                 </div>
             </div>
         </div>
-        <div className='text-center pb-4 text-xl' id='result'>Choose One</div>
+        <div className='text-center pb-4 text-xl' id='result'>
+            Choose One
+        </div>
         <div className='flex flex-row text-center space-x-4 pb-8 place-content-center'>
             <button onClick={() => playRound('rock')} className='bg-blue p-4 rounded-lg w-40 hover:bg-hblue'>Rock</button>
             <button onClick={() => playRound('paper')} className='bg-blue p-4 rounded-lg w-40 hover:bg-hblue'>Paper</button>
@@ -82,11 +91,11 @@ const RPS = () => {
         <div className='flex flex-row text-center space-x-8 place-content-center'>
             <div className=''>
                 <p>Player Choice:</p>
-                <div id='playerChoice' className='bg-dblue p-4 rounded-lg w-40'/>
+                <div id='playerChoice' className='bg-gray p-4 rounded-lg w-40'/>
             </div>
             <div className=''>
                 <p>Computer Choice:</p>
-                <div id='computerChoice' className='bg-dblue p-4 rounded-lg w-40'/>
+                <div id='computerChoice' className='bg-gray p-4 rounded-lg w-40'/>
             </div>
         </div>
     </div>
