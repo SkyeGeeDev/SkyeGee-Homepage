@@ -30,7 +30,7 @@ const MySelect = ({label, ...props } : {label: string; name: string; id: string}
   );
 };
 
-const MyTextArea = ({label, ...props} : {label: string; name: string; rows: number; placeholder: string; id: string}) => {
+const MyTextArea = ({label, ...props} : {label: string; name: string; rows: number; placeholder: string; id: string }) => {
   const [field, meta] = useField(props);
   return (
       <div className='py-4'>
@@ -91,6 +91,7 @@ const ContactMe = () => {
             <Form>
               <MyTextInput
                 label=''
+                id=''
                 name='name'
                 type='text'
                 placeholder='Your Name'
@@ -98,12 +99,13 @@ const ContactMe = () => {
 
               <MyTextInput
                 label=''
+                id=''
                 name='email'
                 type='email'
                 placeholder='Email Address'
               />
 
-              <MySelect label='' name='inquiry'>
+              <MySelect label='' name='inquiry' id=''>
                 <option disabled value="">Select a job type</option>
                 <option value='development'>Front-End Development</option>
                 <option value='design'>Figma Website Design</option>
@@ -113,8 +115,9 @@ const ContactMe = () => {
 
               <MyTextArea
                 label=''
+                id=''
                 name='message'
-                rows='4'
+                rows={4}
                 placeholder='Please tell me a little about yourself!'
               />
 
