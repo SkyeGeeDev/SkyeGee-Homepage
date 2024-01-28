@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import emailjs from '@emailjs/browser'
 import toast from 'react-hot-toast';
 
-const MyTextInput = ({label, ...props } : {label : string; name: string; type: string; placeholder: string}) => {
+const MyTextInput = ({label, ...props } : {label : string; name: string; type: string; placeholder: string; id: string}) => {
   const [field, meta] = useField(props);
   return (
     <div className='py-4'>
