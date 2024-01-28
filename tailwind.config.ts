@@ -16,6 +16,7 @@ const config: Config = {
       gray: '#808080',
       dgray: '#707070',
       black: '#000000',
+      red: '#fe1100',
     },
     fontSize: {
       sm: '18px',
