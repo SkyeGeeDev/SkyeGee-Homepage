@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import emailjs from '@emailjs/browser'
 import toast from 'react-hot-toast';
 
-const MyTextInput = ({label, ...props } : {label: string}) => {
+const MyTextInput = ({label, ...props } : {label : string; name: string; type: string; placeholder: string}) => {
   const [field, meta] = useField(props);
   return (
     <div className='py-4'>
@@ -17,7 +17,7 @@ const MyTextInput = ({label, ...props } : {label: string}) => {
   );
 };
 
-const MySelect = ({label, ...props } : {label: string}) => {
+const MySelect = ({label, ...props } : {label: string; name: string }) => {
   const [field, meta] = useField(props);
   return (
     <div className='py-4'>
@@ -30,7 +30,7 @@ const MySelect = ({label, ...props } : {label: string}) => {
   );
 };
 
-const MyTextArea = ({label, ...props} : {label: string}) => {
+const MyTextArea = ({label, ...props} : {label: string; name: string; rows: string; placeholder: string}) => {
   const [field, meta] = useField(props);
   return (
       <div className='py-4'>
