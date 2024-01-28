@@ -30,7 +30,7 @@ const MySelect = ({label, ...props } : {label: string; name: string; id: string}
   );
 };
 
-const MyTextArea = ({label, ...props} : {label: string; name: string; rows: string; placeholder: string; id: string}) => {
+const MyTextArea = ({label, ...props} : {label: string; name: string; rows: number; placeholder: string; id: string}) => {
   const [field, meta] = useField(props);
   return (
       <div className='py-4'>
