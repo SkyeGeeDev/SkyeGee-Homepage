@@ -12,14 +12,14 @@ import ContactMe from './components/ContactMe'
 import { Toaster } from 'react-hot-toast'
 
 
-const avatarStare = [EO, EO, EO, EO, BC]
-const avatarTalk = [EO, EO, BO, BO, MO, BO];
+const avatarStare = [EO, EO, EO, BC, EO, BC, EO]
+const avatarTalk = [BO, EO, BO, BO, MO, BO, MO];
 
 export default function Home() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [activeTab, setActiveTab] = useState('');
-    const [activated, setActivated] = useState(false);
+    const [activeTab, setActiveTab] = useState('about');
+    const [activated, setActivated] = useState(true);
 
     const handleAbout = () => {
       setActiveTab('about');
@@ -110,7 +110,6 @@ export default function Home() {
                         src={avatarStare[currentIndex]}
                         alt=''
                         className='w-[50vh] h-[50vh] hidden md:block'
-                        objectFit='contain'
                     />
                 }
                 {activated === true &&
@@ -118,10 +117,10 @@ export default function Home() {
                         src={avatarTalk[currentIndex]}
                         alt=''
                         className='w-[50vh] h-[50vh] hidden md:block'
-                        objectFit='contain'
                     />
                 }
                 <Transition 
+                  appear={true}
                   show={activated}
                   enter='transition-all ease-in-out duration-500 delay-[200ms]'
                   enterFrom='opacity-0 translate-y-6'
@@ -130,7 +129,7 @@ export default function Home() {
                   leaveFrom='opacity-100'
                   leaveTo='opacity-0'
                 >
-                    {activeTab === '' && <div className='hidden'></div>}
+                    {activated === false && <div className='hidden'></div>}
                     {activeTab === 'about' && <About />}
                     {activeTab === 'project' && <Projects />}
                     {activeTab === 'contact' && <ContactMe />}
