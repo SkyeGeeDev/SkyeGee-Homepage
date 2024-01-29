@@ -63,12 +63,12 @@ const RPS = (props: any) => {
     }
 
   return (
-    <div className='pb-8 px-[100px] border-2 rounded-lg place-content-center item-center bg-dblue'>
+    <div className='pb-8 px-2 border-2 rounded-lg place-content-center item-center bg-dblue'>
         <div className='mt-4 cursor-pointer' onClick={back}>
             <IoMdArrowBack size={30}/>
         </div>
         <div className='text-center pb-8'>
-            <p className='text-xl py-4'>Scoreboard</p>
+            <p className='text-lg md:text-xl py-4'>Scoreboard</p>
             <div className='flex flex-row place-content-center space-x-4'>
                 <div className='bg-hblue p-4 rounded-lg'>
                     <p>Player</p>
@@ -80,22 +80,22 @@ const RPS = (props: any) => {
                 </div>
             </div>
         </div>
-        <div className='text-center pb-4 text-xl' id='result'>
+        <div className='text-center pb-4 text-lg md:text-xl' id='result'>
             Choose One
         </div>
-        <div className='flex flex-row text-center space-x-4 pb-8 place-content-center'>
+        <div className='flex flex-col md:flex-row text-center space-y-4 md:space-x-4 pb-8 place-items-center'>
             <button onClick={() => playRound('rock')} className='bg-blue p-4 rounded-lg w-40 hover:bg-hblue'>Rock</button>
             <button onClick={() => playRound('paper')} className='bg-blue p-4 rounded-lg w-40 hover:bg-hblue'>Paper</button>
             <button onClick={() => playRound('scissors')} className='bg-blue p-4 rounded-lg w-40 hover:bg-hblue'>Scissors</button>
         </div>
-        <div className='flex flex-row text-center space-x-8 place-content-center'>
+        <div className='flex flex-col text-center md:space-x-8 place-items-center'>
             <div className=''>
                 <p>Player Choice:</p>
-                <div id='playerChoice' className='bg-gray p-4 rounded-lg w-40'/>
+                <div id='playerChoice' className='bg-swhite p-4 rounded-lg w-40 text-dblue'/>
             </div>
             <div className=''>
                 <p>Computer Choice:</p>
-                <div id='computerChoice' className='bg-gray p-4 rounded-lg w-40'/>
+                <div id='computerChoice' className='bg-swhite p-4 rounded-lg w-40 text-dblue'/>
             </div>
         </div>
     </div>

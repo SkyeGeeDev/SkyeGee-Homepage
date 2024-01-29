@@ -63,9 +63,9 @@ export default function Home() {
   return (
     <main className=''>
       <Toaster />
-      <div className='min-h-screen grid grid-cols-12 mx-[70px]'>
+      <div className='min-h-screen grid grid-cols-12 md:mx-[70px] mx-[20px]'>
         <div className='col-span-full bg-gray flex flex-col justify-between my-8 rounded-lg'>
-            <div className='flex flex-row space-x-8 justify-center pt-10' >
+            <div className='flex flex-row space-x-8 justify-center py-10 mx-4' >
                 {activeTab === 'about' && activated === true
                   ? 
                   <button onClick={handleAbout} className="shadow-xl hover:shadow-blue relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden transition ease-in-out duration-300 border-2 rounded-xl group">
@@ -109,15 +109,16 @@ export default function Home() {
                     <Image 
                         src={avatarStare[currentIndex]}
                         alt=''
-                        width={400}
+                        className='w-[50vh] h-[50vh] hidden md:block'
+                        objectFit='contain'
                     />
                 }
                 {activated === true &&
                     <Image 
                         src={avatarTalk[currentIndex]}
                         alt=''
-                        width={400}
-                        className='h-fit'
+                        className='w-[50vh] h-[50vh] hidden md:block'
+                        objectFit='contain'
                     />
                 }
                 <Transition 
