@@ -11,13 +11,13 @@ const About = () => {
             <a href='https://twitter.com/intent/user?screen_name=SkyeGeeTV' target='_blank' rel='noopener noreferrer' className='bg-blue flex p-4 justify-center place-items-center rounded-md hover:bg-hblue'>
               <span className=''><BsTwitter size="25"/></span>
             </a>
-            <a className='bg-blue flex p-4 justify-center place-items-center rounded-md hover:bg-hblue'>
+            <a href='https://www.tiktok.com/@skyegeetv' target='_blank' rel='noopener noreferrer' className='bg-blue flex p-4 justify-center place-items-center rounded-md hover:bg-hblue'>
               <span className=''><BsTiktok size="25"/></span>
             </a>
-            <a className='bg-blue flex p-4 justify-center place-items-center rounded-md hover:bg-hblue'>
+            <a href='https://www.youtube.com/@SkyeGeeTV' target='_blank' rel='noopener noreferrer' className='bg-blue flex p-4 justify-center place-items-center rounded-md hover:bg-hblue'>
               <span className=''><BsYoutube size="25"/></span>
             </a>
-            <a className='bg-blue flex p-4 justify-center place-items-center rounded-md hover:bg-hblue'>
+            <a href='https://www.twitch.tv/skyegee' target='_blank' rel='noopener noreferrer' className='bg-blue flex p-4 justify-center place-items-center rounded-md hover:bg-hblue'>
               <span className=''><BsTwitch size="25"/></span>
             </a>
         </div>
