@@ -67,59 +67,59 @@ export default function Home() {
         <div className='col-span-full bg-gray flex flex-col justify-between my-8 rounded-lg'>
             <div className='flex flex-row space-x-8 justify-center py-10 mx-4' >
                 {activeTab === 'about' && activated === true
-                  ? 
+                  ?
                   <button onClick={handleAbout} className="shadow-xl hover:shadow-blue relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden transition ease-in-out duration-300 border-2 rounded-xl group">
                     <span className='absolute flex items-center justify-center w-full h-full bg-hblue hover:bg-blue'>About</span>
                     <span className='relative invisible'>Favorite Project</span>
                   </button>
-                  : 
+                  :
                   <button onClick={handleAbout} className="shadow-xl hover:shadow-hblue relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden transition ease-in-out duration-300 border-2 rounded-xl group">
                     <span className='absolute flex items-center justify-center w-full h-full bg-blue hover:bg-hblue'>About</span>
                     <span className='relative invisible'>Favorite Project</span>
                   </button>
                 }
                 {activeTab === 'project' && activated === true
-                  ? 
+                  ?
                   <button onClick={handleProject} className="shadow-xl hover:shadow-blue relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden transition ease-in-out duration-300 border-2 rounded-xl group">
                     <span className='absolute flex items-center justify-center w-full h-full bg-hblue hover:bg-blue'>Projects</span>
                     <span className='relative invisible'>Favorite Project</span>
                   </button>
-                  : 
+                  :
                   <button onClick={handleProject} className="shadow-xl hover:shadow-hblue relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden transition ease-in-out duration-300 border-2 rounded-xl group">
                     <span className='absolute flex items-center justify-center w-full h-full bg-blue hover:bg-hblue'>Projects</span>
                     <span className='relative invisible'>Favorite Project</span>
                   </button>
                 }
                 {activeTab === 'contact' && activated === true
-                  ? 
+                  ?
                   <button onClick={handleContact} className="shadow-xl hover:shadow-blue relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden transition ease-in-out duration-300 border-2 rounded-xl group">
                     <span className='absolute flex items-center justify-center w-full h-full bg-hblue hover:bg-blue'>Contact Me</span>
                     <span className='relative invisible'>Favorite Project</span>
                   </button>
-                  : 
+                  :
                   <button onClick={handleContact} className="shadow-xl hover:shadow-hblue relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden transition ease-in-out duration-300 border-2 rounded-xl group">
                     <span className='absolute flex items-center justify-center w-full h-full bg-blue hover:bg-hblue'>Contact Me</span>
                     <span className='relative invisible'>Favorite Project</span>
                   </button>
                 }
-                
+
             </div>
-            <div className='flex flex-row text-center justify-evenly place-items-end'>
-                {activated === false && 
-                    <Image 
+            <div className='flex flex-row text-center justify-evenly'>
+                {activated === false &&
+                    <Image
                         src={avatarStare[currentIndex]}
                         alt=''
                         className='w-[50vh] h-[50vh] hidden md:block'
                     />
                 }
                 {activated === true &&
-                    <Image 
+                    <Image
                         src={avatarTalk[currentIndex]}
                         alt=''
                         className='w-[50vh] h-[50vh] hidden md:block'
                     />
                 }
-                <Transition 
+                <Transition
                   appear={true}
                   show={activated}
                   enter='transition-all ease-in-out duration-500 delay-[200ms]'

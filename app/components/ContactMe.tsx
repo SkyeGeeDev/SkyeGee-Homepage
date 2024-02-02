@@ -45,8 +45,8 @@ const MyTextArea = ({label, ...props} : {label: string; name: string; rows: numb
 
 const ContactMe = () => {
   return (
-    <div className='flex flex-col py-10 px-8 mx-4 md:px-20 mb-8 bg-dblue rounded-xl border-2'>
-      <div className='flex text-lg text-white font-bold'>
+    <div className='flex flex-col px-8 mx-4 md:px-20 mb-8 bg-dblue rounded-xl border-2'>
+      <div className='flex mt-4 text-lg text-white font-bold'>
         SkyeGee Contact Form
       </div>
         <Formik
@@ -121,7 +121,7 @@ const ContactMe = () => {
                 placeholder='Please tell me a little about yourself!'
               />
 
-              <button className='bg-blue hover:bg-hblue rounded-lg p-4 text-white border-2' type='submit'>Submit</button>
+              <button className='bg-blue hover:bg-hblue rounded-lg p-4 mb-4 text-white border-2' type='submit'>Submit</button>
             </Form>
           </div>
         </Formik>
