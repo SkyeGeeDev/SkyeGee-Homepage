@@ -104,12 +104,12 @@ export default function Home() {
                 }
 
             </div>
-            <div className='flex flex-row text-center justify-evenly'>
+            <div className='flex flex-row text-center justify-evenly place-items-end'>
                 {activated === false &&
                     <Image
                         src={avatarStare[currentIndex]}
                         alt=''
-                        className='w-[50vh] h-[50vh] hidden md:block'
+                        className='w-[50vh] h-[50vh] hidden'
                     />
                 }
                 {activated === true &&
